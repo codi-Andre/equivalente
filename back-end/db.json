@@ -1,0 +1,93 @@
+{
+    "alimentos": [{
+        "id": 1,
+        "nome": "arroz",
+        "quantidade": 100,
+        "calorias": 130,
+        "carboidratos": 28,
+        "gorduras": 0.3,
+        "proteinas": 2.7,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 2,
+        "nome": "banana",
+        "quantidade": 100,
+        "calorias": 89,
+        "carboidratos": 23,
+        "gorduras": 0.3,
+        "proteinas": 1.1,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 3,
+        "nome": "banana-da-terra",
+        "quantidade": 122,
+        "calorias": 89,
+        "carboidratos": 32,
+        "gorduras": 0.4,
+        "proteinas": 1.3,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 4,
+        "nome": "batata",
+        "quantidade": 100,
+        "calorias": 77,
+        "carboidratos": 17,
+        "gorduras": 0.1,
+        "proteinas": 2,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 5,
+        "nome": "batata-doce",
+        "quantidade": 100,
+        "calorias": 86,
+        "carboidratos": 20,
+        "gorduras": 0.1,
+        "proteinas": 1.6,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 6,
+        "nome": "carne bovina",
+        "quantidade": 100,
+        "calorias": 250,
+        "carboidratos": 0,
+        "gorduras": 15,
+        "proteinas": 26,
+        "categoria": "ricos em proteínas"
+    }, {
+        "id": 7,
+        "nome": "carne de porco",
+        "quantidade": 100,
+        "calorias": 242,
+        "carboidratos": 0,
+        "gorduras": 14,
+        "proteinas": 27,
+        "categoria": "ricos em proteínas"
+    }, {
+        "id": 8,
+        "nome": "frango",
+        "quantidade": 100,
+        "calorias": 239,
+        "carboidratos": 0,
+        "gorduras": 14,
+        "proteinas": 27,
+        "categoria": "ricos em proteínas"
+    }, {
+        "id": 9,
+        "nome": "inhame",
+        "quantidade": 100,
+        "calorias": 118,
+        "carboidratos": 28,
+        "gorduras": 0.2,
+        "proteinas": 1.5,
+        "categoria": "ricos em carboidratos"
+    }, {
+        "id": 10,
+        "nome": "mandioca",
+        "quantidade": 100,
+        "calorias": 159,
+        "carboidratos": 38,
+        "gorduras": 0.3,
+        "proteinas": 1.4,
+        "categoria": "ricos em carboidratos"
+    }]
+}
