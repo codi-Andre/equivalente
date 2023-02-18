@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const foodData = []
 fetch('http://localhost:3000/alimentos')
@@ -10,6 +10,11 @@ export function Main() {
     const [option1, setOption1] = useState('')
     const [option2, setOption2] = useState('')
     const [quantity, setQuantity] = useState(0)
+    const [result, setResult] = useState(0)
+
+    useEffect(() => {
+        if(option1 && option2 && quantity) operation()
+    }, [option1, option2, quantity])
 
     function handleOption1(e) {
         setOption1(e.target.value)
@@ -21,6 +26,17 @@ export function Main() {
 
     function handleQuantity(e) {
         setQuantity(e.target.value)
+    }
+
+    function operation() {
+        let [meal1, meal2] = [0, 0]
+
+        for (const food of foodData) {
+            if (food.nome === option1) meal1 = (food.calorias / food.quantidade) * quantity
+            if (food.nome === option2) meal2 = (food.calorias / food.quantidade)
+        }
+
+        setResult((meal1 / meal2).toFixed(1))
     }
 
     return (
@@ -36,7 +52,7 @@ export function Main() {
             <input type="text" id="option2" list="food" value={option2} onChange={e => handleOption2(e)} />
             <div className="display">
                 <h3>Resultado</h3>
-                <p></p>
+                <p>{`${result} gramas`}</p>
             </div>
         </main>
     )
