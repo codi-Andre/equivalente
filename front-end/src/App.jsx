@@ -1,5 +1,7 @@
-import { Header } from "./sections/Header"
-import { Main } from "./sections/Main"
+import { Header } from "./layout/Header"
+import { Main } from "./layout/Main"
+
+import { Footer } from "./layout/Footer"
 
 function App() {
   
@@ -7,6 +9,7 @@ function App() {
     <>
       <Header />
       <Main />
+      <Footer />
     </>
   )
 }

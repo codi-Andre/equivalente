@@ -89,5 +89,23 @@
         "gorduras": 0.3,
         "proteinas": 1.4,
         "categoria": "ricos em carboidratos"
+    }, {
+        "id": 11,
+        "nome": "carne de peixe",
+        "quantidade": 100,
+        "calorias": 206,
+        "carboidratos": 0,
+        "gorduras": 12,
+        "proteinas": 22,
+        "categoria": "ricos em proteínas"
+    }, {
+        "id": 12,
+        "nome": "ovo",
+        "quantidade": 100,
+        "calorias": 155,
+        "carboidratos": 1.1,
+        "gorduras": 11,
+        "proteinas": 13,
+        "categoria": "ricos em proteínas"
     }]
 }

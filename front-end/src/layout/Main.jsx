@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+import { FoodInput } from "../components/FoodInput";
+import { GoogleIcons } from "../components/GoogleIcons";
+
 const foodData = []
 fetch('http://localhost:3000/alimentos')
     .then(resp => resp.json())
@@ -9,8 +12,8 @@ export function Main() {
 
     const [option1, setOption1] = useState('')
     const [option2, setOption2] = useState('')
-    const [quantity, setQuantity] = useState(0)
-    const [result, setResult] = useState(0)
+    const [quantity, setQuantity] = useState('')
+    const [result, setResult] = useState('')
 
     useEffect(() => {
         if(option1 && option2 && quantity) operation()
@@ -45,14 +48,38 @@ export function Main() {
                 {foodData.map(food => (<option key={food.id}>{food.nome}</option>))}
             </datalist>
             <label htmlFor="option1">Primário:</label>
-            <input type="text" id="option1" list="food" value={option1} onChange={e => handleOption1(e)}/>
+            <FoodInput 
+                type="text" 
+                placeholder="Ex: carne de peixe" 
+                id="option1" 
+                list="food" 
+                value={option1} 
+                onChange={handleOption1} 
+                help=""
+                icon={<GoogleIcons name="set_meal" />} 
+            />
             <label htmlFor="qtd">Quantidade:</label>
-            <input type="number" id="qtd" min={0} value={quantity} onChange={e => handleQuantity(e)} />
+            <FoodInput 
+                type="number" 
+                placeholder="Ex: 100" 
+                id="qtd" 
+                value={quantity} 
+                onChange={handleQuantity} 
+                help="gramas(g)" 
+            />
             <label htmlFor="option2">Objetivo:</label>
-            <input type="text" id="option2" list="food" value={option2} onChange={e => handleOption2(e)} />
+            <FoodInput 
+                type="text" 
+                placeholder="Ex: ovo" 
+                id="option2" list="food" 
+                value={option2} 
+                onChange={handleOption2} 
+                help=""
+                icon={<GoogleIcons name="egg" />}
+            />
             <div className="display">
-                <h3>Resultado</h3>
-                <p>{`${result} gramas`}</p>
+                <h3>Resultado <GoogleIcons name="restaurant" /></h3>
+                <p>{ result ? `${result} gramas` : '' }</p>
             </div>
         </main>
     )
