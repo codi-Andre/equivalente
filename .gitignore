@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#plans
+TODO.md
+NutritionalTable.jsx
