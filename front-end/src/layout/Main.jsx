@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import { FoodInput } from "../components/FoodInput";
 import { GoogleIcons } from "../components/GoogleIcons";
+import { NutritionalTable } from '../components/NutritionalTable';
 
 const foodData = []
 fetch('http://localhost:3000/alimentos')
@@ -13,7 +14,7 @@ export function Main() {
     const [option1, setOption1] = useState('')
     const [option2, setOption2] = useState('')
     const [quantity, setQuantity] = useState('')
-    const [result, setResult] = useState('')
+    const [result, setResult] = useState([{}, {}])
 
     useEffect(() => {
         if(option1 && option2 && quantity) operation()
@@ -32,14 +33,30 @@ export function Main() {
     }
 
     function operation() {
-        let [meal1, meal2] = [0, 0]
+        let [meal1, meal2] = [{}, {}]
 
         for (const food of foodData) {
-            if (food.nome === option1) meal1 = (food.calorias / food.quantidade) * quantity
-            if (food.nome === option2) meal2 = (food.calorias / food.quantidade)
+            if (food.nome === option1) meal1 = {...food}
+            if (food.nome === option2) meal2 = {...food}
         }
 
-        setResult((meal1 / meal2).toFixed(1))
+        if (option1 === meal1.nome && quantity) {
+            meal1.quantidade = quantity
+            meal1.calorias = ((meal1.calorias / 100) * quantity).toFixed(1)
+            meal1.carboidratos = ((meal1.carboidratos / 100) * quantity).toFixed(1)
+            meal1.proteinas = ((meal1.proteinas / 100) * quantity).toFixed(1)
+            meal1.gorduras = ((meal1.gorduras / 100) * quantity).toFixed(1)
+        }
+
+        if (option1 === meal1.nome && option2 === meal2.nome) {
+            meal2.quantidade = (meal1.calorias / (meal2.calorias / 100)).toFixed(1)
+            meal2.calorias = ((meal2.calorias / 100) * meal2.quantidade).toFixed(1)
+            meal2.carboidratos = ((meal2.carboidratos / 100) * meal2.quantidade).toFixed(1)
+            meal2.proteinas = ((meal2.proteinas / 100) * meal2.quantidade).toFixed(1)
+            meal2.gorduras = ((meal2.gorduras / 100) * meal2.quantidade).toFixed(1)
+        }
+
+        setResult([{...meal1}, {...meal2}])
     }
 
     return (
@@ -79,7 +96,7 @@ export function Main() {
             />
             <div className="display">
                 <h3>Resultado <GoogleIcons name="restaurant" /></h3>
-                <p>{ result ? `${result} gramas` : '' }</p>
+                <NutritionalTable option1={result[0]} option2={result[1]} />
             </div>
         </main>
     )
