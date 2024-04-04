@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+<h1 align="center">
+    Equivalente
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">Calculadora para medir a quantidade de calorias equivalente entre dois alimentos distintos.</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/codi-andre/equivalente.svg">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/codi-andre/equivalente.svg">
 
-## Expanding the ESLint configuration
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/codi-andre/equivalente.svg">
+  <a href="https://github.com/codi-andre/equivalente/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/codi-andre/equivalente.svg">
+  </a>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+  <a href="https://github.com/codi-andre/equivalente/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/codi-andre/equivalente.svg">
+  </a>
+</p>
 
-- Configure the top-level `parserOptions` property like this:
+<p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;
+</p>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Technologies
+
+This project was developed with the following technologies:
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+
+## How To Use
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
