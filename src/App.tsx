@@ -1,15 +1,26 @@
+import { Scale } from "lucide-react"
+
+import { FoodProvider } from "@/context/food-context"
+import { Form } from "@/components/ui/form"
+import { Toaster } from "@/components/ui/toaster"
+
 function App() {
   return (
-    <>
-      <h1 className="bg-red-500 md:bg-green-500 ">Hello World!</h1>
-      <p className="text-2xl">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil,
-        repellendus. Cum corrupti numquam ratione. Est omnis accusantium ullam
-        ratione temporibus? Perferendis, dicta a atque assumenda consequatur eos
-        pariatur necessitatibus nam!
-      </p>
-      <button>button</button>
-    </>
+    <div className="mx-auto h-full max-w-96 rounded-lg bg-white p-6 shadow-2xl">
+      <header>
+        <h1 className="mb-6 text-2xl font-medium">
+          <Scale className="mr-2 inline-block" />
+          Equivalente
+        </h1>
+      </header>
+
+      <main>
+        <FoodProvider>
+          <Form />
+        </FoodProvider>
+        <Toaster />
+      </main>
+    </div>
   )
 }
 
