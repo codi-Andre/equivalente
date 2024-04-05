@@ -57,16 +57,27 @@ export function FoodProvider({ children }: FoodProviderProps) {
   function updateFood(name: string, position: number) {
     if (position === 1) {
       setFood1(name)
-      setFoodData((prev) => ({ ...prev, calories1: "", group1: "" }))
+      setFoodData((prev) => ({
+        ...prev,
+        calories1: "",
+        calories2: "",
+        group1: ""
+      }))
       return
     }
 
-    setFoodData((prev) => ({ ...prev, calories2: "", group2: "" }))
+    setFoodData((prev) => ({
+      ...prev,
+      calories1: "",
+      calories2: "",
+      group2: ""
+    }))
     setFood2(name)
   }
 
   function updateQuantity(quantity: string) {
     setQuantity1(quantity)
+    setFoodData((prev) => ({ ...prev, calories1: "", calories2: "" }))
   }
 
   function calculate() {

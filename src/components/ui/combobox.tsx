@@ -22,7 +22,7 @@ import {
 interface ComboboxProps<T> {
   position: number
   value: string
-  setValue: (food: string, position: number) => void
+  setValue: (name: string, position: number) => void
   list: T[]
 }
 

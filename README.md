@@ -19,6 +19,10 @@
   </a>
 </p>
 
+## Agradecimento especial a [Raul Melo](https://github.com/raulfdm) por realizar o tratamento dos dados e disponibilizar a [tabela TACO](http://www.nepa.unicamp.br/taco/tabela.php) em um formato versátil.
+
+O projeto TACO (Tabela Brasileira de Composição de Alimentos), coordenado pelo Núcleo de Estudos e Pesquisas em Alimentação (NEPA) da UNICAMP e com financiamento do Ministério da Saúde – MS e do Ministério do Desenvolvimento Social e Combate à Fome – MDS, é uma iniciativa para proporcionar dados de um grande número de nutrientes em alimentos nacionais e regionais, obtidos por meio de amostragem representativa e análises realizadas por laboratórios com competência analítica comprovada por estudos interlaboratoriais, segundo critérios internacionais.
+
 <p align="center">
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;
